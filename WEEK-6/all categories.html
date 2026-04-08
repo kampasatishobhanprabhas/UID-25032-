@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Card Layout</title>
+
+ <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 40px;
+    }
+
+    .container {
+        display: flex;
+        
+        justify-content:center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        background: #ffffff;
+        width: 300px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: px 04px 500px rgba(0,0,0,0.1);
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+    }
+
+    .card h2 {
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+    
+
+    .card p {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .card button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007BFF;
+        color: white;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+    }
+
+    .card button:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container" style="display: flex;">
+    
+    <div class="card">
+        <h3 style="text-align: center;">Item 1</h3>
+        <img src="https://kenstar.in/cdn/shop/files/Silk_REF-2.jpg?v=1722493017" width="100%">
+        <p>This is the first item</p>
+        <button>Add To Cart</button>
+        <p style="text-align: center;color:red;font-size: larger;">$20</p>
+    </div>
+
+    <div class="card">
+        <h3 style="text-align: center;">Item 2</h3>
+        <img src="https://m.media-amazon.com/images/G/31/img20/Smallappliances/Mixer-grinders.jpg" width="100%">
+        <p>This is the second item</p>
+        <button>Add To Cart</button>
+        <p style="text-align: center;color:red;font-size: larger;">$100</p>
+    </div>
+
+    <div class="card">
+        <h3 style="text-align: center;">Item 3</h3>
+        <img src="https://images-eu.ssl-images-amazon.com/images/I/41Yu6oKmziL._AC_UL375_SR375,375_.jpg" width="100%">
+        <p>This is the third item</p>
+        <button>Add To Cart</button>
+        <p style="text-align: center;color:red;font-size: larger;">$200</p>
+    </div> 
+</div>       
+</body>
+</html>

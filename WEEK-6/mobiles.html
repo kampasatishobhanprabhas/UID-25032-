@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Card Layout</title>
+
+ <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 40px;
+    }
+
+    .container {
+        display: flex;
+        
+        justify-content:center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        background: #ffffff;
+        width: 300px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: px 04px 500px rgba(0,0,0,0.1);
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+    }
+
+    .card h2 {
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+    
+
+    .card p {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .card button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007BFF;
+        color: white;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+    }
+
+    .card button:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container" style="display: flex;">
+    
+    <div class="card">
+        <h3 style="text-align: center;">Item 1</h3>
+        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQVah07g5QBPsJRpvlUgJWcRa35tckjW49H7dH-_Y6Rp-_SOhwAuXcwUmZBQt4kojUyX3NeQGxS3jm6Hw63lQ-3VlpkbSBiyw1SLT6jt0wT2MVR066hVqAsDE_LnXdR8QAZ9h4DTZc&usqp=CAc" width="100%">
+        <p>This is the first item</p>
+        <button>Add To Cart</button>
+        <p style="text-align: center;color:red;font-size: larger;">$600</p>
+    </div>
+
+    <div class="card">
+        <h3 style="text-align: center;">Item 2</h3>
+        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT3374JvWa7rIDk5vM8CGzt-i16SYN9A0qSOnycghngOJHc-cXefeBn6sk8LXyJ9hp0hrG93Q8UA2PWTes4B_05RNYpc9GpFedhkB96yTtvAaY3SUN9jbwEEUDcDmh1y3knSjSaHuLB&usqp=CAc" width="100%">
+        <p>This is the second item</p>
+        <button>Add To Cart</button>
+        <p style="text-align: center;color:red;font-size: larger;">$500</p>
+    </div>
+
+    <div class="card">
+        <h3 style="text-align: center;">Item 3</h3>
+        <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRsQH4fwBhuA2puMxMjxB6jNGmxyTxQjT-v3g5fM0eEVDYuB0rvBUbI8bNZNNqCH3lF4yTFP19MClY8pZDWryJ_XMDpZJHG9Bq7PSsoRpcNUr_jA-SuZhAnni2gybusxSVy6Fze_fRZFYw&usqp=CAc" width="100%">
+        <p>This is the third item</p>
+        <button>Add To Cart</button>
+        <p style="text-align: center;color:red;font-size: larger;">$200</p>
+    </div> 
+</div>       
+</body>
+</html>
