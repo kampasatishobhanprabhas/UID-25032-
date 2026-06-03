@@ -1,0 +1,231 @@
+
+<html>
+<head>
+    <title>Number Property Checker</title>
+
+    <style>
+        body {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            height: 100vh;
+            margin:6px;
+            border:black;
+            border-collapse:collapse;
+            border-radius:5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight:bolder;
+            color:yellow;
+
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+            text-align: center;
+            width: 350px;
+            color: white;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color:#e74c3c;
+            background-color:turquoise;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: larger;
+            font-weight: bolder;
+            border: 2px solid black;
+            padding:5px;
+            border-radius:10px;
+            border-collapse:collapse;
+
+
+
+        }
+
+        input {
+            padding: 10px;
+            width: 80%;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .buttons button {
+            padding: 10px 12px;
+            margin: 5px;
+            border: none;
+            border-radius: 10px;
+            background: #ffffff;
+            color:blue;
+            cursor: pointer;
+            transition: 1s;
+            font-weight: bold;
+        }
+
+        .buttons button:hover {
+            background-color: #ffd369;
+            transform: scale(1.05);
+            border:2px solid black;
+            border-collapse:collapse;
+            border-radius:10px;
+            margin:10px;
+            color:yellow;
+            font-size:larger;
+            font-weight:bolder;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .result-box {
+            margin-top: 20px;
+            padding: 15px;
+            border:2px solid black;
+            border-radius: 12px;
+            background-color: white;
+            color: black;
+            transition: 0.3s;
+            font-size:larger;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-weight:bolder;
+
+
+        }
+
+        .success {
+            background-color: #4CAF50 !important;
+            color: white !important;
+        }
+
+        .fail {
+            background-color: #e74c3c !important;
+            color: white !important;
+        }
+
+        .info {
+            background-color: #3498db !important;
+            color: white !important;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1> Number Checker </h1>
+
+    <input type="number" id="numInput" placeholder="Enter number">
+
+    <div class="buttons">
+        <button onclick="checkEvenOdd()">Even / Odd</button>
+        <button onclick="checkPrime()">Prime</button>
+        <button onclick="checkArmstrong()">Armstrong</button>
+        <button onclick="checkFactorial()">Factorial</button>
+    </div>
+
+    <div class="result-box" id="result">
+        Result will appear here
+    </div>
+</div>
+
+<script>
+
+// Even / Odd
+function checkEvenOdd() {
+    let n = document.getElementById("numInput").value;
+
+    if (n === "") {
+        alert("Enter number");
+        return;
+    }
+
+    if (n % 2 == 0)
+        document.getElementById("result").innerText = "Even";
+    else
+        document.getElementById("result").innerText = "Odd";
+}
+
+// Prime
+function checkPrime() {
+    let n = document.getElementById("numInput").value;
+
+    if (n === "") {
+        alert("Enter number");
+        return;
+    }
+
+    let prime = true;
+
+    if (n <= 1) prime = false;
+
+    for (let i = 2; i < n; i++) {
+        if (n % i == 0) {
+            prime = false;
+            break;
+        }
+    }
+
+    if (prime)
+        document.getElementById("result").innerText = "Prime";
+    else
+        document.getElementById("result").innerText = "Not Prime";
+}
+
+// Armstrong
+function checkArmstrong() {
+    let n = document.getElementById("numInput").value;
+
+    if (n === "") {
+        alert("Enter number");
+        return;
+    }
+
+    let sum = 0;
+    let temp = n;
+    let digits = n.length;
+
+    while (temp > 0) {
+        let d = temp % 10;
+        sum += d ** digits;
+        temp = Math.floor(temp / 10);
+    }
+
+    if (sum == n)
+        document.getElementById("result").innerText = "Armstrong";
+    else
+        document.getElementById("result").innertext = "not armstrong"
+}
+
+// Factorial
+function checkFactorial() {
+    let n = document.getElementById("numInput").value;
+
+    if (n === "") {
+        alert("Enter number");
+        return;
+    }
+
+    let fact = 1;
+
+    for (let i = 1; i <= n; i++) {
+        fact *= i;
+    }
+
+    document.getElementById("result").innerText = "Factorial: " + fact;
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
